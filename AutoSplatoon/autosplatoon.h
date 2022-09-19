@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QQueue>
 
 #include "commonNames.h"
 #include "inputemulator.h"
@@ -67,6 +68,7 @@ private:
     QSignalMapper* signalMapper;
 
     QImage image;
+    QQueue<char> operations{};
     int interval;
     int column, row;
     bool pauseFlag = false;
